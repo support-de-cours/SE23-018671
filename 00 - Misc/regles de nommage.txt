@@ -1,0 +1,4 @@
+ceci_est_une_chaine_snake
+ceci-est-une-chaine-slug
+ceciEstUneChaineLowerCamelCase
+CeciEstUneChaineUppererCamelCase
