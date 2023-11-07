@@ -7,8 +7,11 @@ $car = new Car("Ford");
 $bike = new Bike("Triumph");
 ?>
 
-<div><?= $car->getBrand() ?></div>
+<div><?= $car->getBrand(true) ?></div>
 <div><?= $car->getWheels() ?></div>
+
+<div><?= $car->start() ?></div>
+<div><?= $car->accelerate() ?></div>
 <div><?= Car::ENGINE ?></div>
 <hr>
 <div><?= $bike->getBrand() ?></div>

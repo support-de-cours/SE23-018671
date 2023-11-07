@@ -6,7 +6,9 @@
 abstract class Vehicle
 {
     const ENGINE = "Diesel";
-    private string $brand;
+    protected string $brand;
+
+    private bool $isStarted = false;
 
     public function __construct(string $brand)
     {
@@ -27,5 +29,22 @@ abstract class Vehicle
         }
         
         return 0;
+    }
+
+
+    
+    public function start()
+    {
+        $this->changeStartState();
+    }
+    public function accelerate()
+    {
+        
+    }
+
+
+    private function changeStartState()
+    {
+        $this->isStarted = true;
     }
 }
