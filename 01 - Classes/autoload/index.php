@@ -36,7 +36,9 @@ use Controller\Velo;
 
 $car = new Voiture("Ford");
 $moto = new Moto("Triumph");
+
 $velo = new Velo("Peugeot");
+unset($velo);
 
 ?>
 
