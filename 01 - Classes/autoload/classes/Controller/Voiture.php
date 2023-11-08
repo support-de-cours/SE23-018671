@@ -4,6 +4,7 @@ namespace Controller;
 
 use Abstract\VehiculeMoteur;
 
+// Controller\Voiture
 class Voiture extends VehiculeMoteur
 {
     const ROUES = 4;
