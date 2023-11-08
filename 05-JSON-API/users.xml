@@ -1,0 +1,22 @@
+<users>
+    <user age="42">
+        <firstname>John</firstname>
+        <lastname>DOE</lastname>
+        <email>john@doe.com</email>
+        <isActive>true</isActive>
+    </user>
+    <user>
+        <firstname>Jane</firstname>
+        <lastname>DOE</lastname>
+        <email>jane@doe.com</email>
+        <age>42</age>
+        <isActive>true</isActive>
+    </user>
+    <user age="42">
+        <firstname>Bob</firstname>
+        <lastname>DOE</lastname>
+        <email>bob@doe.com</email>
+        <age>42</age>
+        <isActive>false</isActive>
+    </user>
+</users>

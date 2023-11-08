@@ -11,3 +11,7 @@ CREATE TABLE user(
 
 ALTER TABLE `user`
   ADD UNIQUE KEY `user_email` (`email`);
+
+
+
+INSERT INTO `user` (`firstname`,`lastname`,`email`,`password`,`birthday`) VALUES ("BOBBY","DOE","bob@doe.com","123456","2023-11-08")

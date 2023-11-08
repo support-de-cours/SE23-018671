@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "firstname": "John",
+            "lastname": "DOE",
+            "email": "john@doe.com",
+            "age": 42,
+            "isActive": true
+        },
+        {
+            "firstname": "Jane",
+            "lastname": "DOE",
+            "email": "jane@doe.com",
+            "age": 42,
+            "isActive": true
+        },
+        {
+            "firstname": "Bob",
+            "lastname": "DOE",
+            "email": "bob@doe.com",
+            "age": 42,
+            "isActive": false
+        }
+    ]
+}
