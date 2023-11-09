@@ -7,6 +7,11 @@ function dump(mixed $data, bool $withType=false)
     echo "</pre>";
 }
 
+
+// Model
+// --
+
+// Source des données
 $data = [
     "users" => [
         [
@@ -33,13 +38,28 @@ $data = [
     ]
 ];
 
+
+
+// Controller
+// --
+
+// Manipulation de la source
 $json = json_encode($data);
 
 // dump($data);
 // dump(gettype($json));
 // dump($json);
 
+
+
+
+
+// View 
+// --
+
 // header("HTTP/1.1 404 Not Found");
 header("Content-Type: application/json");
+// header("X-Machin: truc");
+header_remove("X-Powered-By");
 // header("Content-Type: text/json");
 echo $json;

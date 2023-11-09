@@ -22,6 +22,11 @@ $data = json_decode($file_contents);
 
 // Recupération du tableau d'utilisateurs
 $users = $data?->users;
+// $users = (object) [];
+// if ($data !== null)
+// {
+//     $users = $data->users;
+// }
 // dump(gettype($users));
 // dump($users);
 
@@ -29,7 +34,12 @@ $users = $data?->users;
 // Si $users est NULL on defini $isers comme etant un tableau vide
 // Le tableau vide permet d'evité une erreur sur le foreach($users)
 $users = is_array($users) ? $users : [];
+// if (!is_array($users))
+// {
+//     $users = [];
+// }
 // dump(gettype($users));
+
 ?>
 
 <table>
@@ -38,6 +48,7 @@ $users = is_array($users) ? $users : [];
             <th>Firstname</th>
             <th>Lastname</th>
             <th>Email</th>
+            <th>PP</th>
         </tr>
     </thead>
     <tbody>
@@ -47,6 +58,7 @@ $users = is_array($users) ? $users : [];
             <td><?= $user->firstname ?></td>
             <td><?= $user->lastname ?></td>
             <td><?= $user->email ?></td>
+            <td><?= $user->{'profile-picture'} ?></td>
         </tr>
     <?php endforeach; ?>
 

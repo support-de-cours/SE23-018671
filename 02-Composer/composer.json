@@ -13,9 +13,5 @@
         }
     ],
     "require": {
-		"symfony/serializer": "*",
-		"symfony/orm-pack": "*",
-		"symfony/security-bundle": "*",
-		"symfony/serializer-pack": "*"
     }
 }

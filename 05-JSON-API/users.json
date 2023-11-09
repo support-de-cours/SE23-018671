@@ -5,21 +5,24 @@
             "lastname": "DOE",
             "email": "john@doe.com",
             "age": 42,
-            "isActive": true
+            "isActive": true,
+            "profile-picture": "azertyuio"
         },
         {
             "firstname": "Jane",
             "lastname": "DOE",
             "email": "jane@doe.com",
             "age": 42,
-            "isActive": true
+            "isActive": true,
+            "profile-picture": "azertyuio"
         },
         {
             "firstname": "Bob",
             "lastname": "DOE",
             "email": "bob@doe.com",
             "age": 42,
-            "isActive": false
+            "isActive": false,
+            "profile-picture": "azertyuio"
         }
     ]
 }
