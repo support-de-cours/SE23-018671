@@ -55,6 +55,7 @@ abstract class AbstractController
 
     protected function json(array $data, string $routeName)
     {
+        // dd($data);
         array_walk($data, fn(&$item) => $item->link = url($routeName, ['id' => $item->id], true) );
         // foreach ($data as $key => $item)
         // {

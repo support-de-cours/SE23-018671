@@ -122,7 +122,18 @@ class BooksController extends AbstractController
     {
         return $this->json(
             $this->model->all(),
-            'book:read'
+            'api:book:read'
+        );
+    }
+
+    public function read_api($id)
+    {
+        $book = $this->model->one($id);
+        $book = [$book];
+
+        return $this->json(
+            $book,
+            'api:book:read'
         );
     }
 }
