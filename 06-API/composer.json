@@ -1,0 +1,15 @@
+{
+    "name": "arnaud/06-api",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arnaud BODEL",
+            "email": "arnaud.bodel@gmail.com"
+        }
+    ],
+    "require": {}
+}
