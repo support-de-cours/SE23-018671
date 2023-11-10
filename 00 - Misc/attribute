@@ -1,0 +1,25 @@
+<?php 
+
+
+class Hello 
+{
+    public function __construct(
+        private string $name
+    ){}
+
+    public function getName(): string 
+    {
+        return $this->name;
+    }
+}
+
+#[Hello("John")]
+class MyClass 
+{
+    public function __construct(private Hello $hello)
+    {
+        echo "Hello ". $hello->getName();
+    }
+}
+
+new MyClass;

@@ -21,17 +21,55 @@ const ROUTES = [
     ],
 
     // Books
-    [
+    // --
+    // site.com/books
+    // site.com/book
+    // site.com/book/42
+    // site.com/book/42/edit
+    // site.com/book/42/delete
+    // --
+    // site.com/books
+    // site.com/books/create
+    // site.com/books/42
+    // site.com/books/42/edit
+    // site.com/books/42/delete
+
+    // -- (API)
+    // site.com/books (GET)
+    // site.com/book (GET, POST)
+    // site.com/book/42 (GET)
+    // site.com/book/42 (PUT, PATCH)
+    // site.com/book/42 (DELETE)
+
+    [ // Liste des livres
         'name'       => "book:index",
         'path'       => "/books",
         'controller' => "App\Controller\BooksController::index",
         'methods'    => ['HEAD', 'GET']
     ],
-    [
+    [ // Ajouter un livre
+        'name'       => "book:create",
+        'path'       => "/book",
+        'controller' => "App\Controller\BooksController::create",
+        'methods'    => ['HEAD', 'GET', 'POST']
+    ],
+    [ // Lire le detail d'un livre
         'name'       => "book:read",
-        'path'       => "/books/{id}",
+        'path'       => "/book/{id}",
         'controller' => "App\Controller\BooksController::read",
         'methods'    => ['HEAD', 'GET']
+    ],
+    [ // Modifier les données d'un livre
+        'name'       => "book:update",
+        'path'       => "/book/{id}/edit",
+        'controller' => "App\Controller\BooksController::update",
+        'methods'    => ['HEAD', 'GET', 'POST']
+    ],
+    [ // Supprimer un livre
+        'name'       => "book:delete",
+        'path'       => "/book/{id}/delete",
+        'controller' => "App\Controller\BooksController::delete",
+        'methods'    => ['HEAD', 'GET', 'POST']
     ],
 
     // Contact
@@ -40,14 +78,6 @@ const ROUTES = [
         'path'       => "/contact",
         'controller' => "App\Controller\ContactController",
         'methods'    => ['HEAD', 'GET', 'POST']
-    ],
-
-    // User
-    [
-        'name'       => "users",
-        'path'       => "/users",
-        'controller' => "App\Controller\UsersController::index",
-        'methods'    => ['HEAD', 'GET']
     ],
 
     // 404

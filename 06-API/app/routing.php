@@ -53,8 +53,9 @@ foreach (ROUTES as $route)
     //  "/books/{id}" -> "/books/\.+"
     $pattern = strToRegex("/", $route['path']);
 
-    if (preg_match("@^".$pattern."$@", $uri))
+    if (preg_match("@^".$pattern."$@", $uri, $params))
     {
+        $route['params'] = isset($params[1]) ? ['id' => $params[1]] : [];
         break;
     }
 }

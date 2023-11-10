@@ -3,9 +3,7 @@
 if (!function_exists('url')) 
 {
     function url(string $routeName, array $params = [], bool $absolute = false): string
-    {
-        global $routes;
-    
+    {    
         // Définition de la variable base
         $base = '';
         $path = '/404';
@@ -30,13 +28,13 @@ if (!function_exists('url'))
     
 
         // Recupération du "path" depuis la table de routage
-        if (is_array($routes)) 
+        if (is_array(ROUTES)) 
         {
-            foreach ($routes as $route) 
+            foreach (ROUTES as $route) 
             {
-                if ($route[0] == $routeName) 
+                if ($route['name'] == $routeName) 
                 {
-                    $path = $route[1];
+                    $path = $route['path'];
                     break;
                 }
             }
