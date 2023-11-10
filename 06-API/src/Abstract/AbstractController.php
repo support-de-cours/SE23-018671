@@ -53,6 +53,27 @@ abstract class AbstractController
         include_once TEMPLATE_PATH.$template.TEMPLATE_TYPE;
     }
 
+    protected function json(array $data, string $routeName)
+    {
+        array_walk($data, fn(&$item) => $item->link = url($routeName, ['id' => $item->id], true) );
+        // foreach ($data as $key => $item)
+        // {
+        //     $link = url(
+        //         $routeName, 
+        //         ['id' => $item->id], 
+        //         true
+        //     );
+
+        //     $data[$key]->link = $link;
+        // }
+
+        $json = json_encode($data);
+        header('Content-Type: application/json');
+        header_remove('x-powered-by');
+
+        return $json;
+    }
+
     private function defineCalledController(): string
     {
         $class = get_called_class();

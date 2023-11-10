@@ -115,5 +115,15 @@ class BooksController extends AbstractController
     {
         return $this->render('books/delete');
     }
+
+    // ----- API ----------
+
+    public function index_api()
+    {
+        return $this->json(
+            $this->model->all(),
+            'book:read'
+        );
+    }
 }
 

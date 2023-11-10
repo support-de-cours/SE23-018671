@@ -72,6 +72,16 @@ const ROUTES = [
         'methods'    => ['HEAD', 'GET', 'POST']
     ],
 
+
+    [ // Liste des livre pour API
+        'name'       => "api:book:index",
+        'path'       => "/api/books",
+        'controller' => "App\Controller\BooksController::index_api",
+        'methods'    => ['HEAD', 'GET']
+    ],
+
+    
+
     // Contact
     [
         'name'       => "contact",
